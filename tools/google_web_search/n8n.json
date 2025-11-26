@@ -1,0 +1,101 @@
+{
+    "name": "Search Beam Connector",
+    "nodes": [
+      {
+        "parameters": {
+          "path": "search-form",
+          "formTitle": "Advanced Search",
+          "formDescription": "Enter your search query to get comprehensive results with follow-up information",
+          "formFields": {
+            "values": [
+              {
+                "fieldLabel": "query",
+                "requiredField": true,
+                "placeholder": "Enter your search query here..."
+              }
+            ]
+          },
+          "options": {}
+        },
+        "id": "search_form_trigger",
+        "name": "n8n Form Trigger",
+        "type": "n8n-nodes-base.formTrigger",
+        "typeVersion": 2.1,
+        "position": [
+          280,
+          400
+        ],
+        "webhookId": "search-beam-endpoint"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "YOUR_BEAM_ENDPOINT_URL_HERE",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Authorization",
+                "value": "Bearer YOUR_BEAM_API_KEY_HERE"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Connection",
+                "value": "keep-alive"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "query",
+                "value": "={{ $json.query }}"
+              }
+            ]
+          },
+          "options": {},
+          "responseFormat": "text"
+        },
+        "id": "search_beam_http_request",
+        "name": "HTTP Request",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          500,
+          400
+        ]
+      }
+    ],
+    "pinData": {},
+    "connections": {
+      "n8n Form Trigger": {
+        "main": [
+          [
+            {
+              "node": "HTTP Request",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "HTTP Request": {
+        "main": [
+          []
+        ]
+      }
+    },
+    "active": false,
+    "settings": {
+      "executionOrder": "v1"
+    },
+    "meta": {
+      "templateCredsSetupCompleted": true,
+      "instanceId": "search-beam-instance"
+    },
+    "tags": []
+  }

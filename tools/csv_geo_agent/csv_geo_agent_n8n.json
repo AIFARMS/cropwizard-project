@@ -1,0 +1,117 @@
+{
+  "name": "CSV Geo Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "csv-geo-agent-form",
+        "formTitle": "CSV Geographic Analysis Tool",
+        "formDescription": "Analyze geographic data and perform spatial operations with advanced AI",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Query",
+              "fieldName": "query",
+              "requiredField": true,
+              "placeholder": "Describe the analysis you want to perform on your geographic data"
+            },
+            {
+              "fieldLabel": "Location",
+              "fieldName": "location",
+              "requiredField": false,
+              "placeholder": "Optional: Provide a location for weather data (city or ZIP code)"
+            },
+            {
+              "fieldLabel": "File URLs",
+              "fieldName": "file_urls",
+              "requiredField": false,
+              "placeholder": "URLs to the geographic data files (will be auto-populated)"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "csv-geo-agent-form-trigger",
+      "name": "n8n Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.1,
+      "position": [
+        280,
+        400
+      ],
+      "webhookId": "csv-geo-agent-form"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+          "url": "YOUR_BEAM_ENDPOINT_URL_HERE",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer YOUR_BEAM_API_KEY_HERE"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ $json.query }}"
+            },
+            {
+              "name": "location",
+              "value": "={{ $json.location }}"
+            },
+            {
+              "name": "file_urls",
+              "value": "={{ $json.file_urls }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "csv-geo-agent-http-request",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        500,
+        400
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "n8n Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "csv-geo-agent-instance"
+  },
+  "tags": []
+} 
