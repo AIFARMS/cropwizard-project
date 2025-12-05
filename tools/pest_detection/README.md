@@ -78,8 +78,8 @@ The endpoint returns a list of base64-encoded PNG images:
 
 ```json
 [
-    "iVBORw0KGgoAAAANSUhEUgAA...",  // base64-encoded annotated image 1
-    "iVBORw0KGgoAAAANSUhEUgAA..."   // base64-encoded annotated image 2
+    "iVBORw0KGgoAAAANSUhEUgAA...",
+    "iVBORw0KGgoAAAANSUhEUgAA..."
 ]
 ```
 
