@@ -1,18 +1,20 @@
 # Pest Detection Tool Requirements
 
 # Deep Learning Framework
-torch==2.2.0
-torchvision==0.17.0
+# Updated to address CVE vulnerabilities in torch < 2.6.0
+torch>=2.6.0
+torchvision>=0.19.0
 
 # YOLO Model
-ultralytics==8.1.0
+# Updated to latest compatible version
+ultralytics>=8.3.0
 
 # Image Processing
-opencv-python
-pillow
+opencv-python>=4.10.0
+pillow>=10.4.0
 
 # Beam Cloud (for deployment)
 # Install separately: pip install beam-client
 
 # Testing Dependencies
-requests
+requests>=2.32.0

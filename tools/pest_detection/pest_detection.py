@@ -27,12 +27,13 @@ import requests
 import beam
 
 # Define Python package requirements for the Beam environment
+# Updated versions to address security vulnerabilities
 requirements = [
-    "torch==2.2.0",
-    "ultralytics==8.1.0",
-    "torchvision==0.17.0",
-    "opencv-python",
-    "pillow",
+    "torch>=2.6.0",
+    "ultralytics>=8.3.0",
+    "torchvision>=0.19.0",
+    "opencv-python>=4.10.0",
+    "pillow>=10.4.0",
 ]
 
 # Define volume path for model storage
