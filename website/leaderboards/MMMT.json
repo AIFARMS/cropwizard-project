@@ -1,0 +1,62 @@
+[
+  {
+    "model": "GPT-4o",
+    "group": "proprietary",
+    "zero_shot_acc": 62.98,
+    "zero_shot_clarify": 70.75,
+    "zero_shot_respond": 77.07,
+    "cot_acc": 65.50,
+    "cot_clarify": 72.80,
+    "cot_respond": 78.50
+  },
+  {
+    "model": "Claude 3.7 Sonnet",
+    "group": "proprietary",
+    "zero_shot_acc": 57.80,
+    "zero_shot_clarify": 24.39,
+    "zero_shot_respond": 23.45,
+    "cot_acc": 62.40,
+    "cot_clarify": 34.90,
+    "cot_respond": 28.70
+  },
+  {
+    "model": "LLaMA 4 Maverick 17B",
+    "group": "open",
+    "zero_shot_acc": 53.75,
+    "zero_shot_clarify": 65.08,
+    "zero_shot_respond": 70.65,
+    "cot_acc": 59.80,
+    "cot_clarify": 69.10,
+    "cot_respond": 74.20
+  },
+  {
+    "model": "LLaMA 4 Scout 17B", 
+    "group": "open",
+    "zero_shot_acc": 49.81,
+    "zero_shot_clarify": 61.79,
+    "zero_shot_respond": 68.67,
+    "cot_acc": 56.00,
+    "cot_clarify": 66.40,
+    "cot_respond": 71.30
+  },
+  {
+    "model": "LLaMA 3.2 90B",
+    "group": "open",
+    "zero_shot_acc": 45.09,
+    "zero_shot_clarify": 52.43,
+    "zero_shot_respond": 62.27,
+    "cot_acc": 50.40,
+    "cot_clarify": 56.20,
+    "cot_respond": 65.10
+  },
+  {
+    "model": "Qwen2.5-VL 72B Inst",
+    "group": "open",
+    "zero_shot_acc": 31.33,
+    "zero_shot_clarify": 58.76,
+    "zero_shot_respond": 75.00,
+    "cot_acc": 37.40,
+    "cot_clarify": 63.90,
+    "cot_respond": 76.50
+  }
+]
