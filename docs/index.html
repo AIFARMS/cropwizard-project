@@ -54,11 +54,14 @@
     <section class="hero">
       <div class="hero-body">
         <div class="container has-text-centered">
+          <div style="margin-bottom: 1rem;">
+            <img src="static/images/cropwizard.jpg" alt="CropWizard" style="max-width: 100%; width: 180px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />
+          </div>
           <h1 class="title is-1">
             CropWizard
           </h1>
           <h2 class="subtitle is-3">Growing from Illinois Chat to Cultivate AI for Agriculture</h2>
-          
+
           <!-- Add institutional logos -->
           <div class="mt-4 has-text-centered" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;">
             <a href="https://aifarms.illinois.edu/" target="_blank" style="text-decoration: none;">
@@ -107,12 +110,54 @@
     <section id="introduction" class="section">
       <div class="container is-max-desktop content">
         <h2 class="sectionsubtitle">Introduction</h2>
+        
+        <!-- CropWizard Image -->
+        <div class="has-text-centered" style="margin: 2rem 0 3rem 0;">
+          <img src="static/images/cropwizard.png" alt="CropWizard" style="max-width: 100%; width: 70%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+      </div>
+        
         <p style="margin-bottom: 1.5rem;">
           CropWizard is one of the first significant research applications built entirely on the Illinois Chat platform, a new campus-developed artificial intelligence software tool by the National Center for Supercomputing Applications (NCSA) for the University of Illinois Urbana-Champaign community. While Illinois Chat was designed to give faculty, students, and researchers a secure way to build their own customizable chatbots with local data and privacy safeguards, CropWizard takes that same technology into the field, literally. Developed through the Center for Digital Agriculture, AIFARMS National AI for Agriculture Institute, and NCSA, CropWizard serves as an interactive question-answering and decision-support service powered by generative AI designed for agricultural professionals.
         </p>
-        <p style="margin-bottom: 1.5rem;">
+        <!-- <p style="margin-bottom: 1.5rem;">
           Using Illinois Chat's fully automatic retrieval-augmented generation (RAG) framework, CropWizard consults over 200,000 curated agricultural publications, mainly Extension documents from U.S. land-grant universities and a growing set of open-access research papers. CropWizard also consults a portfolio of computational tools specific to agriculture to answer data-driven questions. The result is a "virtual agronomist" capable of offering tailored farming advice, research insights, and computational analyses of user data. Users can ask CropWizard about pest management, crop rotation, or nutrient requirements, or even upload images for multimodal question-answering using integrated detection tools.
+        </p> -->
+
+        <!-- RAG Database Subsection -->
+        <h3 class="title is-4" style="margin-top: 2.5rem; margin-bottom: 1rem; color: #3273dc;">RAG Database</h3>
+        <p style="margin-bottom: 1.5rem;">
+          CropWizard's RAG database contains over 200,000 curated agricultural documents, including Extension publications from U.S. land-grant universities, peer-reviewed research papers, and agricultural best practices guides. The database is continuously updated with new publications and is indexed for efficient retrieval of relevant information based on user queries.
         </p>
+
+        <!-- Image Handling Subsection -->
+        <h3 class="title is-4" style="margin-top: 2.5rem; margin-bottom: 1rem; color: #3273dc;">Image Handling</h3>
+        <p style="margin-bottom: 1.5rem;">
+          CropWizard employs advanced computer vision models to analyze agricultural images uploaded by users. The system can identify plant species, detect diseases and pests, assess crop health, and recognize various agricultural conditions. Images are processed using state-of-the-art multimodal AI models that combine visual understanding with contextual agricultural knowledge to provide accurate diagnoses and recommendations.
+        </p>
+
+        <!-- Tools and Agents Subsection -->
+        <h3 class="title is-4" style="margin-top: 2.5rem; margin-bottom: 1rem; color: #3273dc;">Tools and Agents</h3>
+        <p style="margin-bottom: 1.5rem;">
+          CropWizard integrates a suite of specialized agricultural tools and agents, including crop management calculators, pest identification systems, disease diagnosis tools, nutrient requirement analyzers, and weather-based recommendation engines. These tools work together to provide comprehensive, data-driven agricultural advice tailored to specific user needs and local conditions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Research Users Section -->
+    <section id="research-users">
+      <section id="research-users-title" class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-3">
+          Research Users
+        </h1>      
+      </div>
+      </section>      
+      <div class="container is-max-desktop content" style="padding-top: 2rem;">
+        <div class="content">
+          <p style="margin-bottom: 1.5rem; color: #555;">
+            This section will feature information about our research users and their experiences with CropWizard. Content coming soon.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -125,225 +170,80 @@
         </h1>
       </div>
       </section>      
-      <div class="container is-max-desktop">
+      <div class="container is-max-desktop" style="padding-top: 2rem;">
         <!-- MIRAGE Section -->
         <h2 class="sectionsubtitle" style="text-align: center; margin-top: 2rem;">MIRAGE</h2>
-        <p style="margin-bottom: 1.5rem;">
+            <p style="margin-bottom: 1.5rem;">
           MIRAGE-MMST is a benchmark designed to assess multimodal vision-language models on expert-level, single-turn agricultural consultations. Each instance includes a natural-language question, user-submitted images, and associated metadata (e.g., timestamp, location). Models must identify relevant agronomic entities, reason causally about observed visual symptoms, and generate explanatory or actionable management recommendations.
-        </p>
-        <p style="margin-bottom: 1.5rem;">
+            </p>
+            <p style="margin-bottom: 1.5rem;">
           MIRAGE-MMMT is a multimodal decision-making task, grounded in real-world agricultural consultations. Users pose complex, often image-supported questions about plant health, pest identification, growing conditions, and other agronomic concerns. Each dialogue reflects a practical scenario in which the expert must reason over conversation history and visual context to decide: (1) whether to respond with guidance based on what is known, or (2) whether to pause and seek additional input to resolve a knowledge gap. This introduces a decision-making challenge tightly coupled with natural language generation.
         </p>
-
-        <!-- MMST Leaderboard -->
-        <div class="box has-text-centered">
-      <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
-      <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
-
-    <div class="lb-wrapper">
-      <h2 class="sectionsubtitle">MIRAGE-MMST Leaderboard</h2>
-      <div class="legend">
-        <span class="legend-item legend-open">Open-Source</span>
-        <span class="legend-item legend-proprietary">Proprietary</span>
-      </div>
-
-      <table id="lb" class="display stripe" style="width:100%">
-        <thead>
-          <tr>
-            <th rowspan="2" class="separator">Name</th>
-            <th colspan="3" class="separator">Identification</th>
-            <th colspan="5" class="separator">Management</th>
-            <th rowspan="2">Overall</th>
-          </tr>
-          <tr>
-            <th class="id-col">Acc</th>
-            <th class="id-col">Reason</th>
-            <th class="id-col">WS</th>
-            <th class="mg-col">Acc</th>
-            <th class="mg-col">Rel</th>
-            <th class="mg-col">Comp</th>
-            <th class="mg-col">Pars</th>
-            <th class="mg-col">WS</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-    <div class="description-wrapper content has-text-justified">
-      <h3 class="title is-5 mt-5">Metric Descriptions</h3>
-      <div class="content">
-        <h4 class="title is-6">Identification Task Metrics</h4>
-        <ul>
-          <li><strong>Accuracy (Acc):</strong> Measures the correctness of entity identification (e.g., plant species, pests, diseases)</li>
-          <li><strong>Reasoning (Reason):</strong> Evaluates the quality of causal explanations for observed symptoms and conditions</li>
-        </ul>
-
-        <h4 class="title is-6">Management Task Metrics</h4>
-        <ul>
-          <li><strong>Accuracy (Acc):</strong> Measures the correctness of management recommendations</li>
-          <li><strong>Relevance (Rel):</strong> Assesses how well the recommendations address the specific problem</li>
-          <li><strong>Completeness (Comp):</strong> Evaluates whether all necessary management steps are included</li>
-          <li><strong>Parsimony (Pars):</strong> Measures the efficiency and practicality of the recommendations (Occam's Razor)</li>
-        </ul>
-      </div>
-    </div>
-    </div>
-
-
-    
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-
-    <script>
-    fetch("leaderboards/MMST_Standard.json")
-      .then(r=>r.json())
-      .then(rows=>{
-        const metrics = ["id_acc_pct","id_reason",
-                        "mg_acc","mg_rel","mg_comp","mg_pars",
-                        "id_ws","mg_ws","overall"];
-        const maxVal = Object.fromEntries(
-          metrics.map(m=>[m,Math.max(...rows.map(r=>r[m]))]) );
-
-        const table = $('#lb').DataTable({
-          data: rows,
-          dom : 't',
-          paging: false,
-          order:[[9,'desc']],
-          columns:[
-            {title:"Model", data:"model", className: "separator"},
-            {title:"Acc",    data:"id_acc_pct", className:"id-col"},
-            {title:"Reason", data:"id_reason",  className:"id-col"},
-            {title:"WS",     data:"id_ws",      className:"id-col separator"},
-            {title:"Acc",  data:"mg_acc",  className:"mg-col"},
-            {title:"Rel",  data:"mg_rel",  className:"mg-col"},
-            {title:"Comp", data:"mg_comp", className:"mg-col"},
-            {title:"Pars", data:"mg_pars", className:"mg-col"},
-            {title:"WS",   data:"mg_ws",   className:"mg-col separator"},
-            {title:"Overall", data:"overall"}
-          ],
-          createdRow:(row,data)=>{
-            $(row).addClass(
-              data.group==='open' ? 'open-col' : 'proprietary-col');
-
-            metrics.forEach((m,i)=>{
-              if(data[m]===maxVal[m]) $('td',row).eq(i+1).addClass('best');
-            });
-          }
-        });
-      });
-    </script>
-    </div>
-
-        <!-- MMMT Leaderboard -->
-        <div class="box has-text-centered">
-      <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
-      <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
-
-    <div class="lb-wrapper">
-      <h2 class="sectionsubtitle">MIRAGE-MMMT Leaderboard</h2>
-      <div class="legend">
-        <span class="legend-item legend-open">Open-Source</span>
-        <span class="legend-item legend-proprietary">Proprietary</span>
-      </div>
-
-      <style>
-        #lb-mmmt th, #lb-mmmt td {
-          text-align: center !important;
-          vertical-align: middle !important;
-        }
-      </style>
-      
-      <table id="lb-mmmt" class="display stripe" style="width:100%">
-        <thead>
-          <tr>
-            <th rowspan="2" class="separator">Name</th>
-            <th colspan="3" class="separator">Zero-Shot</th>
-            <th colspan="3" class="separator">Chain-of-Thought</th>
-          </tr>
-          <tr>
-            <th class="zs-col">Acc%</th>
-            <th class="zs-col">Clarify</th>
-            <th class="zs-col">Respond</th>
-            <th class="cot-col">Acc%</th>
-            <th class="cot-col">Clarify</th>
-            <th class="cot-col">Respond</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <div class="description-wrapper content has-text-justified">
-        <p>
-          This leaderboard benchmarks large vision-language models on the
-          <strong>MMMT</strong> task of the <em>Cropwizard Benchmark</em>.  
-          The benchmark utilizes a combination of ground-truth labels and LLMs as Judges method.
-        </p>
-      
-        <h3 class="title is-5 mt-5">Metric Descriptions</h3>
-        <div class="content">
-          <ul>
-            <li><strong>Decision Accuracy (Acc&nbsp;%):</strong> Percentage of turns where the model correctly chooses between <em>Clarify</em> and <em>Respond</em> actions, matching the expected decision.</li>
-            <li><strong>Goal Relevance for Clarify (%):</strong> Percentage of clarification questions that directly target missing facts essential to achieving the user's goal.</li>
-            <li><strong>Goal Relevance for Respond (%):</strong> Percentage of responses that appropriately address the user's goal using known facts effectively.</li>
-          </ul>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="https://mirage-benchmark.github.io/" target="_blank" class="button is-link is-rounded" style="margin: 0.5rem; background: linear-gradient(135deg, #3273dc, #4a90e2); border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+            <span class="icon">
+              <i class="fas fa-book"></i>
+            </span>
+            <span>Read More About the Project</span>
+          </a>
+          <a href="https://mirage-benchmark.github.io/" target="_blank" class="button is-info is-rounded" style="margin: 0.5rem; background: linear-gradient(135deg, #00d1b2, #00c4a7); border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+            <span class="icon">
+              <i class="fas fa-trophy"></i>
+            </span>
+            <span>Leaderboard</span>
+          </a>
         </div>
-      </div>      
-    </div>
 
-    
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-
-    <script>
-    fetch("leaderboards/MMMT.json")
-      .then(r=>r.json())
-      .then(rows=>{
-        const metrics = ["zero_shot_acc","zero_shot_clarify","zero_shot_respond",
-                        "cot_acc","cot_clarify","cot_respond"];
-        const maxVal = Object.fromEntries(
-          metrics.map(m=>[m,Math.max(...rows.map(r=>r[m]))]) );
-
-        const table = $('#lb-mmmt').DataTable({
-          data: rows,
-          dom : 't',
-          paging: false,
-          order:[[4,'desc']],
-          columns:[
-            {title:"Model", data:"model", className: "separator"},
-            {title:"Acc%",    data:"zero_shot_acc", className:"zs-col"},
-            {title:"Clarify", data:"zero_shot_clarify",  className:"zs-col"},
-            {title:"Respond", data:"zero_shot_respond",      className:"zs-col separator"},
-            {title:"Acc%",  data:"cot_acc",  className:"cot-col"},
-            {title:"Clarify",  data:"cot_clarify",  className:"cot-col"},
-            {title:"Respond", data:"cot_respond", className:"cot-col"}
-          ],
-          createdRow:(row,data)=>{
-            $(row).addClass(
-              data.group==='open' ? 'open-col' : 'proprietary-col');
-
-            metrics.forEach((m,i)=>{
-              if(data[m]===maxVal[m]) $('td',row).eq(i+1).addClass('best');
-            });
-          }
-        });
-      });
-    </script>
-    </div>
+        <!-- AgMMU Section -->
+        <hr style="margin: 4rem 0; border: 1px solid #e0e0e0;">
+        
+        <h2 class="sectionsubtitle" style="text-align: center; margin-top: 3rem;">AgMMU</h2>
+        <p style="margin-bottom: 1.5rem;">
+          AgMMU is a comprehensive agricultural multimodal understanding benchmark designed to evaluate vision-language models on various agricultural tasks. The benchmark encompasses diverse challenges including plant identification, disease detection, pest recognition, and agricultural scene understanding.
+        </p>
+        <p style="margin-bottom: 1.5rem;">
+          AgMMU provides a rigorous evaluation framework for assessing the capabilities of multimodal AI systems in agricultural contexts, covering a wide range of real-world scenarios and applications.
+        </p>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="https://agmmu.github.io/" target="_blank" class="button is-link is-rounded" style="margin: 0.5rem; background: linear-gradient(135deg, #3273dc, #4a90e2); border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+            <span class="icon">
+              <i class="fas fa-book"></i>
+              </span>
+            <span>Read More About the Project</span>
+          </a>
+          <a href="https://agmmu.github.io/" target="_blank" class="button is-info is-rounded" style="margin: 0.5rem; background: linear-gradient(135deg, #00d1b2, #00c4a7); border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+            <span class="icon">
+              <i class="fas fa-trophy"></i>
+              </span>
+            <span>Leaderboard</span>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="section">
-      <div class="container is-max-desktop content">
-        <h2 class="sectionsubtitle">Publications</h2>
+    <section id="publications">
+      <section id="publications-title" class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-3">
+          Publications
+        </h1>      
+      </div>
+      </section>      
+      <div class="container is-max-desktop content" style="padding-top: 2rem;">
         <div class="content">
           <!-- MIRAGE Publication -->
           <div class="publication-item" style="margin-bottom: 3rem; padding: 2rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             <p style="margin-bottom: 1rem; font-size: 1.2em;">
               <strong>MIRAGE: A Benchmark for Multimodal Information-Seeking and Reasoning in Agricultural Expert-Guided Conversations</strong>
             </p>
-            <p style="margin-bottom: 1.5rem; color: #555;">
+            <p style="margin-bottom: 1rem; color: #555;">
               Vardhan Dongre, Chi Gui, Hooshang Nayyeri, Shubham Garg, Gokhan Tur, Dilek Hakkani-Tür, Vikram Adve
+            </p>
+            <p style="margin-bottom: 1.5rem; color: #888; font-style: italic;">
+              NeurIPS 2025 Datasets & Benchmarks Track
             </p>
             <div class="buttons" style="flex-wrap: wrap; gap: 0.5rem;">
               <a href="https://arxiv.org/abs/2506.20100" target="_blank" class="button is-primary is-rounded" style="background: linear-gradient(135deg, #3273dc, #4a90e2); border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.3s ease;">
@@ -368,16 +268,19 @@
                 </span>
                 <span>Code</span>
               </a>
-            </div>
-          </div>
-          
+        </div>
+        </div>
+
           <!-- AgMMU Publication -->
-          <div class="publication-item" style="margin-bottom: 3rem; padding: 2rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          <div class="publication-item" style="margin-top: 3rem; margin-bottom: 3rem; padding: 2rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             <p style="margin-bottom: 1rem; font-size: 1.2em;">
               <strong>AgMMU: A Comprehensive Agricultural Multimodal Understanding Benchmark</strong>
             </p>
-            <p style="margin-bottom: 1.5rem; color: #555;">
+            <p style="margin-bottom: 1rem; color: #555;">
               Aruna Gauba, Irene Pi, Yunze Man, Ziqi Pang, Vikram S. Adve, Yu-Xiong Wang
+            </p>
+            <p style="margin-bottom: 1.5rem; color: #888; font-style: italic;">
+              NeurIPS 2025 Datasets & Benchmarks Track
             </p>
             <div class="buttons" style="flex-wrap: wrap; gap: 0.5rem;">
               <a href="https://arxiv.org/abs/2504.10568" target="_blank" class="button is-primary is-rounded" style="background: linear-gradient(135deg, #3273dc, #4a90e2); border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.3s ease;">
@@ -402,24 +305,39 @@
                 </span>
                 <span>Code</span>
               </a>
-            </div>
-          </div>
         </div>
-      </div>
+      </div>      
+    </div>
+    </div>
     </section>
 
     <!-- Acknowledgements Section -->
-    <section id="acknowledgements" class="section">
+    <section id="acknowledgements">
+      <section id="acknowledgements-title" class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-3">
+          Acknowledgements
+      </h1>      
+    </div>
+    </section>   
       <div class="container is-max-desktop content">
-        <h2 class="sectionsubtitle">Acknowledgements</h2>
         <p>
-          This work is partly supported by the <a href="https://aifarms.illinois.edu/" target="_blank">AIFARMS</a> National AI Institute</a> and <a href="https://digitalag.illinois.edu/" target="_blank">Center for Digital Agriculture</a> at the University of Illinois. This work used <a href="https://delta.ncsa.illinois.edu/" target="_blank">Delta</a> advanced computing and data resource at University of Illinois Urbana-Champaign and its National Center for Supercomputing Applications, which is supported by U.S. National Science Foundation grants #2138259, #2138286, #2138307, #2137603, and #2138296.
+          This work is partly supported by the <a href="https://aifarms.illinois.edu/" target="_blank">AIFARMS</a> National AI Institute</a> and <a href="https://digitalag.illinois.edu/" target="_blank">Center for Digital Agriculture</a> at the University of Illinois, with support from <a href="https://www.amazon.com/" target="_blank">Amazon</a>, <a href="https://www.ibm.com/" target="_blank">IBM</a>, and <a href="https://www.dpi.illinois.edu/" target="_blank">Discovery Partners Institute</a>. This work used <a href="https://delta.ncsa.illinois.edu/" target="_blank">Delta</a> advanced computing and data resource at University of Illinois Urbana-Champaign and its National Center for Supercomputing Applications, which is supported by U.S. National Science Foundation grants #2138259, #2138286, #2138307, #2137603, and #2138296.
         </p>
         
         <!-- Acknowledgement logos -->
-        <div class="mt-4 has-text-centered" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;">
+        <div class="mt-4 has-text-centered" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;">
           <a href="https://delta.ncsa.illinois.edu/" target="_blank" style="text-decoration: none;">
             <img src="static/figures/logo/ncsa-logo.png" alt="NCSA" style="height: 60px; vertical-align: middle;" />
+          </a>
+          <a href="https://www.ibm.com/" target="_blank" style="text-decoration: none;">
+            <img src="static/images/IBM_logo.svg.png" alt="IBM" style="height: 45px; vertical-align: middle;" />
+          </a>
+          <a href="https://www.amazon.com/" target="_blank" style="text-decoration: none;">
+            <img src="static/images/amazon-logo.jpg" alt="Amazon" style="height: 75px; vertical-align: middle;" />
+          </a>
+          <a href="https://www.dpi.illinois.edu/" target="_blank" style="text-decoration: none;">
+            <img src="static/images/dpi-logo.png" alt="DPI" style="height: 60px; vertical-align: middle;" />
           </a>
         </div>
       </div>
