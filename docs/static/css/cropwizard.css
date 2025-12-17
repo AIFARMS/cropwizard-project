@@ -287,47 +287,22 @@ body { font-family: sans-serif; }
   box-shadow: var(--shadow-medium);
 }
 
-/* Enhanced Navigation */
-.navbar {
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-light);
-  transition: var(--transition);
-}
-
-/* Navigation Buttons */
-.nav-button {
-  color: var(--dark-text) !important;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  transition: var(--transition);
-  text-decoration: none;
-  position: relative;
-}
-
-.nav-button:hover {
-  background: linear-gradient(135deg, #f0f4ff, #e6f0ff);
-  color: var(--primary-color) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(50, 115, 220, 0.2);
-}
-
 /* Prominent CropWizard Button */
 .cropwizard-button {
   background: linear-gradient(135deg, #3273dc, #4a90e2) !important;
   color: white !important;
-  padding: 0.75rem 2rem;
+  padding: 1.25rem 3rem;
   border-radius: 50px;
   font-weight: bold;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 12px rgba(50, 115, 220, 0.4);
+  font-size: 1.3rem;
+  box-shadow: 0 6px 20px rgba(50, 115, 220, 0.5);
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+  border: none;
 }
 
 .cropwizard-button::before {
@@ -342,8 +317,8 @@ body { font-family: sans-serif; }
 }
 
 .cropwizard-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(50, 115, 220, 0.6);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 25px rgba(50, 115, 220, 0.7);
   color: white !important;
 }
 
@@ -352,12 +327,7 @@ body { font-family: sans-serif; }
 }
 
 .cropwizard-button:active {
-  transform: translateY(-1px) scale(1.02);
-}
-
-/* Add padding to body to account for fixed navbar */
-body {
-  padding-top: 70px;
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* Smooth scrolling */
@@ -365,9 +335,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Adjust scroll offset for fixed navbar */
+/* Adjust scroll offset for sections */
 section[id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 20px;
 }
 
 /* Animations */
@@ -558,58 +528,12 @@ section[id] {
     padding: 1rem;
   }
   
-  /* Navigation Mobile */
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-  
-  .navbar-brand {
-    display: block !important;
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem 0;
-  }
-  
-  .navbar-burger {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .navbar-menu {
-    display: none !important;
-    flex-direction: column;
-    gap: 0.5rem !important;
-    padding: 1rem 0;
-  }
-  
-  .navbar-menu.is-active {
-    display: flex !important;
-  }
-  
-  .navbar-start {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem !important;
-  }
-  
-  .nav-button {
-    width: 100%;
-    text-align: center;
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-  
+  /* CropWizard Button Mobile */
   .cropwizard-button {
+    padding: 1rem 2rem !important;
+    font-size: 1.1rem !important;
     width: 100%;
-    max-width: 280px;
-    margin: 0.5rem auto !important;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    justify-content: center;
-  }
-  
-  body {
-    padding-top: 60px;
+    max-width: 300px;
   }
 }
 

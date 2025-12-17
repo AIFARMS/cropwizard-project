@@ -38,36 +38,6 @@
     <link rel="stylesheet" href="./static/css/cropwizard.css" />
   </head>
   <body>
-    <!-- ‑‑‑‑ NAVBAR ‑‑‑‑ -->
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="main-navbar" style="background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 1000;">
-      <div class="container">
-        <div class="navbar-brand" style="display: none;">
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" id="navbar-burger">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div class="navbar-menu" id="navbar-menu" style="display: flex; justify-content: center; align-items: center; padding: 1rem 0;">
-          <div class="navbar-start" style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-            <a href="#introduction" class="navbar-item nav-button">Introduction</a>
-            <a href="#research-users" class="navbar-item nav-button">Research Users</a>
-            
-            <!-- Prominent Centered CropWizard Button -->
-            <a href="https://uiuc.chat/cropwizard-1.5/chat" target="_blank" class="navbar-item cropwizard-button" style="background: linear-gradient(135deg, #3273dc, #4a90e2); color: white; padding: 0.75rem 2rem; border-radius: 50px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(50, 115, 220, 0.4); transition: all 0.3s ease; margin: 0 1rem;">
-              <span class="icon" style="margin-right: 0.5rem;">
-                <i class="fas fa-magic"></i>
-              </span>
-              <span>CropWizard</span>
-            </a>
-            
-            <a href="#benchmarks" class="navbar-item nav-button">Benchmarks</a>
-            <a href="#publications" class="navbar-item nav-button">Publications</a>
-            <a href="#acknowledgements" class="navbar-item nav-button">Acknowledgements</a>
-          </div>
-        </div>
-      </div>
-    </nav>
 
     <!-- ‑‑‑‑ HERO SECTION ‑‑‑‑ -->
     <!-- <section class="hero is-medium is-light"> -->
@@ -92,8 +62,34 @@
             </a>
           </div>
 
-          <!-- LINKS -->
-          <div class="buttons is-centered mt-4">
+          <!-- Prominent Centered CropWizard Button -->
+          <div class="has-text-centered mt-5 mb-5">
+            <a href="https://uiuc.chat/cropwizard-1.5/chat" target="_blank" class="cropwizard-button button is-large" style="background: linear-gradient(135deg, #3273dc, #4a90e2); color: white; padding: 1.25rem 3rem; border-radius: 50px; font-weight: bold; font-size: 1.3rem; box-shadow: 0 6px 20px rgba(50, 115, 220, 0.5); transition: all 0.3s ease; border: none;">
+              <span class="icon" style="margin-right: 0.75rem;">
+                <i class="fas fa-magic"></i>
+              </span>
+              <span>CropWizard</span>
+            </a>
+          </div>
+
+          <!-- Section Navigation Buttons -->
+          <div class="buttons is-centered mt-4" style="flex-wrap: wrap; gap: 0.75rem;">
+            <span class="link-block">
+              <a href="#introduction" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-info-circle"></i>
+                </span>
+                <span>Introduction</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="#research-users" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-users"></i>
+                </span>
+                <span>Research Users</span>
+              </a>
+            </span>
             <span class="link-block">
               <a href="#benchmarks" class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
@@ -108,6 +104,14 @@
                   <i class="fas fa-file-alt"></i>
                 </span>
                 <span>Publications</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="#acknowledgements" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-heart"></i>
+                </span>
+                <span>Acknowledgements</span>
               </a>
             </span>
           </div>
@@ -378,28 +382,6 @@
         audioSection.style.display = audioSection.style.display === 'none' ? 'block' : 'none';
       }
       
-      // Mobile menu toggle
-      document.addEventListener('DOMContentLoaded', function() {
-        const burger = document.getElementById('navbar-burger');
-        const menu = document.getElementById('navbar-menu');
-        const navbar = document.getElementById('main-navbar');
-        
-        if (burger && menu) {
-          burger.addEventListener('click', function() {
-            burger.classList.toggle('is-active');
-            menu.classList.toggle('is-active');
-          });
-          
-          // Close menu when clicking on a link
-          const navLinks = menu.querySelectorAll('.navbar-item');
-          navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-              burger.classList.remove('is-active');
-              menu.classList.remove('is-active');
-            });
-          });
-        }
-      });
     </script>
   </body>
 </html>
